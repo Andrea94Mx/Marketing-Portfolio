@@ -1,9 +1,82 @@
+:root{
+ --main: #fffff0;
+ --mainDark:#2c2c2a;
+ --trans: transparent;
+ --accent: #ED9B40;
+
+}
+
+
 body{
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #1c1e21;
+            font-family: "Oswald", sans-serif;
+            color: var(--main);
             margin: 0;
 }
 
+p{
+    margin: 1px;
+    user-select: none;
+}
+
+h1{
+    user-select: none;
+}
+h2{
+    user-select: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: var(--accent);
+}
+
+a:visited{
+    color: inherit;
+}
+
+.logoContainer{
+display: flex;
+flex-direction: column;
+gap: 0px;
+                margin: 0px;
+}
+
+.headerContainer{
+    margin: 10PX;
+                    display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+}
+
+.headerLogo{
+color: var(--accent);
+    padding-left: 50px;
+font-size: 2em;
+margin-bottom: 0;
+margin-top: 0;
+
+}
+
+.headerSub{
+font-size: 1em;
+    padding-left: 50px;
+        margin-top: 0;
+        text-align: center;
+}
+
+.headerButton{
+background: none;
+border: none;
+    padding-right: 50px;
+}
+
+.headerButton img{
+height: 35px;
+}
 
             .mainContainer{
                 display: flex;
@@ -18,7 +91,7 @@ body{
     
     text-align: center;
             width: 100%;
-            height: 650px;
+            height: 35em;
             position: sticky;
             top: 0;
 }
@@ -27,7 +100,7 @@ body{
     
     text-align: center;
             width: 100%;
-            height: 30vw;
+            height: 25em;
             position: sticky;
             top: 0;
 }
@@ -38,12 +111,94 @@ body{
             height: 100%;
             background-size: cover;
             padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
             }
 
             .header{
                 top: 0;
                 position: sticky;
-                background-color: red;
+                background-color: var(--mainDark);
                 z-index: 1;
-                padding: 20px;
+                padding: 10px;
+
             }
+
+.projectText{
+font-size: 4em;
+text-transform: uppercase;
+margin: 25px;
+}
+
+.projectButton{
+background: none;
+border: var(--main) solid 2px;
+color: var(--main);
+font-family: "Oswald", sans-serif;
+font-size: 1.2em;
+padding: 0.5vw;
+padding-left: 2vw;
+padding-right: 2vw;
+border-radius: 0.5em;
+text-transform: uppercase;
+cursor: pointer;
+}
+
+.projectButton:hover{
+background: var(--main);
+border: var(--main) solid 2px;
+color: var(--mainDark);
+}
+
+.footer{
+display: block;
+background-color: var(--mainDark);
+justify-content: center;
+align-content: center;
+text-align: center;
+padding: 15px;
+font-weight: 200;
+}
+
+.footerContainer{
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-top: 20px;
+}
+
+
+@media (max-width: 850px) {
+
+
+.headerLogo{
+    padding-left: 0px;
+
+}
+.headerButton{
+    padding-right: 0px;
+
+}
+
+.headerSub{
+font-size: 1em;
+    padding-left: 0px;
+}
+.projectButton{
+display: none;
+
+}
+
+.container {
+    height: 30em;
+}
+
+.projectText{
+font-size: 2em;
+
+}
+
+}
