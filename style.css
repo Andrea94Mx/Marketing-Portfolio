@@ -35,10 +35,6 @@ li{
     list-style-type: none;
 }
 
-a:hover{
-    color: var(--accent);
-}
-
 a:visited{
     color: inherit;
 }
@@ -186,6 +182,10 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 padding-top: 20px;
+}
+
+.footerLink:hover{
+    color: var(--accent);
 }
 
 
