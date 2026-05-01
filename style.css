@@ -1,8 +1,9 @@
 :root{
  --main: #fffff0;
- --mainDark:#2c2c2a;
+ --mainDark:#0f0f0f;
  --trans: transparent;
  --accent: #ED9B40;
+ --inverseAccent: #1264BF;
 
 }
 
@@ -30,6 +31,10 @@ a{
     color: inherit;
 }
 
+li{
+    list-style-type: none;
+}
+
 a:hover{
     color: var(--accent);
 }
@@ -50,6 +55,7 @@ gap: 0px;
                     display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                align-items: center;
 }
 
 .headerLogo{
@@ -58,7 +64,7 @@ color: var(--accent);
 font-size: 2em;
 margin-bottom: 0;
 margin-top: 0;
-
+text-align: center;
 }
 
 .headerSub{
@@ -87,6 +93,8 @@ height: 35px;
                 
             }
 
+
+
 .container{           
     
     text-align: center;
@@ -102,7 +110,6 @@ height: 35px;
             width: 100%;
             height: 25em;
             position: sticky;
-            top: 0;
 }
 
 
@@ -110,12 +117,21 @@ height: 35px;
             background-attachment: fixed;
             height: 100%;
             background-size: cover;
-            padding: 10px;
+            padding: 0px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100%;
+            }
+
+            .imgContainer::after{
+content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
             }
 
             .header{
@@ -131,6 +147,7 @@ height: 35px;
 font-size: 4em;
 text-transform: uppercase;
 margin: 25px;
+z-index: 2;
 }
 
 .projectButton{
@@ -145,12 +162,13 @@ padding-right: 2vw;
 border-radius: 0.5em;
 text-transform: uppercase;
 cursor: pointer;
+z-index: 2;
 }
 
 .projectButton:hover{
 background: var(--main);
 border: var(--main) solid 2px;
-color: var(--mainDark);
+color: var(--inverseAccent);
 }
 
 .footer{
@@ -197,7 +215,15 @@ display: none;
 }
 
 .projectText{
-font-size: 2em;
+font-size: 3em;
+
+}
+
+}
+
+@media (max-width: 650px) {
+.projectText{
+font-size: 2.5em;
 
 }
 
